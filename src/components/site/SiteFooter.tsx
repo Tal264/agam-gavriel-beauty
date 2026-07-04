@@ -78,7 +78,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border/60 py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Agam Gavriel · כל הזכויות שמורות
+        © {new Date().getFullYear()}  · כל הזכויות שמורות  made with ❤️ by dot.page |  Agam Gavriel
       </div>
     </footer>
   );

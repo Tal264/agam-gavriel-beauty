@@ -12,6 +12,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fontsource/assistant": "^5.2.9",
     "@fontsource/cormorant-garamond": "^5.2.11",
     "@hookform/resolvers": "^5.4.0",
