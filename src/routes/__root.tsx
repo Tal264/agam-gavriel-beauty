@@ -76,33 +76,53 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "אגם גבריאל | מאפרת ומעצבת שיער לכלות ואירועים" },
-      {
-        name: "description",
-        content:
-          "אגם גבריאל – מאפרת ומעצבת שיער מקצועית לכלות, ערב ואופנה. מגיעה למקום ההתארגנות. אסתטיקה יוקרתית, מראה טבעי וזוהר.",
-      },
-      { name: "author", content: "Agam Gavriel" },
-      { property: "og:title", content: "אגם גבריאל | מאפרת ומעצבת שיער" },
-      {
-        property: "og:description",
-        content:
-          "שירותי איפור ועיצוב שיער יוקרתיים לכלות, ערב ואופנה. מגיעה למקום ההתארגנות.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:locale", content: "he_IL" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#f7f1e8" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "canonical", href: "/" },
-    ],
-  }),
+  meta: [
+    { charSet: "utf-8" },
+    { name: "viewport", content: "width=device-width, initial-scale=1" },
+
+    { title: "אגם גבריאל | מאפרת ומעצבת שיער לכלות ואירועים" },
+
+    {
+      name: "description",
+      content:
+        "אגם גבריאל – מאפרת ומעצבת שיער מקצועית לכלות, ערב ואופנה. מגיעה למקום ההתארגנות. אסתטיקה יוקרתית, מראה טבעי וזוהר.",
+    },
+
+    { name: "author", content: "Agam Gavriel" },
+
+    // ✅ OPEN GRAPH (WhatsApp / Facebook / iMessage)
+    { property: "og:title", content: "אגם גבריאל | מאפרת ומעצבת שיער" },
+    {
+      property: "og:description",
+      content:
+        "שירותי איפור ועיצוב שיער יוקרתיים לכלות, ערב ואופנה. מגיעה למקום ההתארגנות.",
+    },
+    { property: "og:type", content: "website" },
+    { property: "og:locale", content: "he_IL" },
+    { property: "og:url", content: "https://agamgavriel.dot-page-studio.workers.dev/" },
+    { property: "og:image", content: "/og-image.jpg" },
+    { property: "og:image:width", content: "1200" },
+    { property: "og:image:height", content: "630" },
+
+    // ✅ TWITTER CARDS
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "אגם גבריאל | מאפרת ומעצבת שיער" },
+    {
+      name: "twitter:description",
+      content:
+        "שירותי איפור ועיצוב שיער יוקרתיים לכלות, ערב ואופנה. מגיעה למקום ההתארגנות.",
+    },
+    { name: "twitter:image", content: "/og-image.jpg" },
+
+    { name: "theme-color", content: "#f7f1e8" },
+  ],
+
+  links: [
+    { rel: "stylesheet", href: appCss },
+    { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    { rel: "canonical", href: "https://agamgavriel.dot-page-studio.workers.dev/" },
+  ],
+}),
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
